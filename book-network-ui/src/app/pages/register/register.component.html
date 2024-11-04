@@ -1,0 +1,50 @@
+<div class="container-fluid card login-container">
+
+  <img class="mx-auto mt-4 mb-4" src="assets/exchange.png" width="80px">
+
+  <h3 class="text-center mb-2">Sign up</h3>
+
+
+  <div class="alert alert-danger" role="alert" *ngIf="errorMsg.length">
+    <p *ngFor="let msg of errorMsg">{{ msg }}</p>
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input [(ngModel)]="registerRequest.email" type="email" class="form-control" name="" id="email" placeholder="name@example.com">
+  </div>
+
+  <div class="mb-3">
+    <label for="firstname" class="form-label">Firstname</label>
+    <input [(ngModel)]="registerRequest.firstname" type="text" class="form-control" name="" id="firstname" placeholder="First name">
+  </div>
+
+  <div class="mb-3">
+    <label for="lastname" class="form-label">Lastname</label>
+    <input [(ngModel)]="registerRequest.lastname" type="text" class="form-control" name="" id="lastname" placeholder="Last name">
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input [(ngModel)]="registerRequest.password" type="password" class="form-control" name="" id="password" placeholder="Password">
+  </div>
+
+<!--  <div class="mb-3">-->
+<!--    <label for="password" class="form-label">Confirm Password</label>-->
+<!--    <input [(ngModel)]="registerRequest.password" type="password" class="form-control" name="" id="password" placeholder="Password">-->
+<!--  </div>-->
+
+  <div class="d-flex flex-column mb-3">
+    <button (click)="register()" type="button" class="btn btn-success mb-4">
+      <i class="fas fa-sign-in-alt"></i>&nbsp;Continue
+    </button>
+    <hr>
+    <div class="d-flex justify-content-center align-items-center">
+      Already have an account?&nbsp;
+      <button (click)="login()" type="button" class="btn btn-link">
+        Login
+      </button>
+    </div>
+  </div>
+
+</div>

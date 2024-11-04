@@ -1,0 +1,16 @@
+div {
+  &.card {
+    max-height: 460px;
+    min-height: 460px;
+  }
+}
+i {
+  cursor: pointer;
+}
+i {
+  &:hover {
+    padding: 2px;
+    border-radius: 4px;
+    background-color: #8edcaf;
+  }
+}
